@@ -1,0 +1,84 @@
+.cargando{
+    background: #000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cargando h2{
+    color: #fff;
+    font-size: 5rem;
+}
+.mainContent{
+    position: absolute;
+    right: 0;
+    width: 82%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.btnModal{
+    width: 100%;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.modal{
+    padding: 1rem 10rem;
+    background: red;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 1s ease;
+
+}
+.modal:hover{
+    cursor: pointer;
+    background: #000;
+}
+.proyectos{
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    padding: 1rem;
+    gap: 2rem 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 15rem;
+}
+.card{
+    width: 100%;
+    max-width: 60rem;
+    position: relative;
+}
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    background: red;
+    color: #fff;
+}
+.portada{
+    width: 100%;
+    height: 60%;
+    border-radius: 1.5rem;
+}
+.contenido a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    transition-duration: .5s;
+}
+.contenido p{
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.contenido a:hover{
+    color: var(--primary);
+}

@@ -1,0 +1,18 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    /* background-color: #000; */
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+}
+
+.footer h3{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: .5em 0;
+    color: var(--white);
+}

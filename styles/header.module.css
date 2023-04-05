@@ -1,0 +1,162 @@
+/* .barra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(min-width: 768px){
+    .barra{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion{
+    display: flex;
+    gap: 2rem;
+    z-index: 10;
+} */
+
+/* @media(min-width: 768px){
+    .navegacion{
+        margin: 0;
+    }
+}
+
+.navegacion p{
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: .5rem;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+.navegacion p:hover,
+.active{
+    background-color: var(--primary);
+} */
+.barra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    /* flex-wrap: wrap; */
+    max-width: 100%;
+    height: 90px;
+    padding: 0;
+    margin: 0;
+}
+.nav ul{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+@media(min-width: 768px){
+    .nav{
+        flex-direction: row;
+    }
+    .nav ul{
+        width: auto;
+    }
+}
+.nav ul li{
+    position: relative;
+    display: inline-block;
+    padding: 1rem 0;
+    margin-left: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.navsito{
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    transition: .5s;
+    z-index: 1;
+    position: relative;
+}
+.liquid{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #4973ff;
+    z-index: -1;
+    transition: .5s;
+}
+.liquid::after,
+.liquid::before{
+    position: absolute;
+    content: '';
+    top: -30px;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -75%);
+}
+.liquid::before{
+    background: #000;
+    border-radius: 45%;
+    animation: animate 5s linear infinite;
+}
+.liquid::after{
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 40%;
+    animation: animate 10s linear infinite;
+}
+.nav ul li:hover .liquid{
+    top: 0;
+    transition: 1.5s;
+}
+@keyframes animate {
+    0%{
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
+
+/*  */
+.logo{
+    text-decoration: none;
+}
+.logo h3{
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.logo h3 span{
+    font-size: 24px;
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    transition: .8s ease-in-out;
+}
+.logo h3:hover span:nth-child(1){
+    width: 60px;
+    overflow: hidden;
+}
+.logo h3:hover span:nth-child(2){
+    width: 150px;
+    overflow: hidden;
+}

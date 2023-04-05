@@ -1,0 +1,56 @@
+.contenedor{
+    width:85%;
+    margin: 50px auto 100px auto;
+    position: relative;
+}
+
+.titulo{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.tecnologia{
+    width: 100%;
+    padding: 3rem 0;
+    margin: 3rem 0;
+    justify-content: center;
+}
+
+.tarjeta{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.paragraph{
+    font-size: 5rem;
+    color: var(--white);
+}
+
+.tooltip::before{
+    content: attr(mensaje);
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: max-content;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    
+    font-size: 3rem;
+    pointer-events: none;
+    transition: opacity .3s;
+    
+    z-index: 10;
+    opacity: 0;
+}
+
+.tooltip:hover::before{
+    opacity: 1;
+}

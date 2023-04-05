@@ -1,0 +1,68 @@
+
+.flex{
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+.grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: red;
+}
+.btn .icon{
+    margin-left: .5rem;
+}
+.btn:hover{
+    background: red;
+    color: aliceblue;
+}
+
+.sideBar{
+    position: fixed;
+    left: 0;
+    box-shadow: 1px 0px 4px red;
+    max-width: 18%;
+    width: 100%;
+    height: 100%;
+    gap: 3rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.menuDiv,
+.settingsDiv{
+    text-align: center;
+}
+.listItem{
+    padding: .2rem 1.5rem;
+    width: 100%;
+    position: relative;
+
+}
+.listItem::before{
+    position: absolute;
+    content: '';
+    height: 0;
+    left: 0;
+    width: 5px;
+    bottom: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: black;
+}
+.menuLink{
+    color: gray;
+    font-weight: 500;
+}
+.icon{
+    font-size: 2rem;
+    margin-right: .5rem;
+}
+.menuLink:hover{
+    color: #000;
+}
+.listItem:hover::before{
+    height: 100%;
+    transition: .3s ease;
+}
