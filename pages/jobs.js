@@ -4,7 +4,7 @@ import Link from "next/link"
 import useTrabajo from "../hook/useTrabajo"
 import styles from "../styles/jobs.module.css"
 
-export default function jobs() {
+export default function Jobs() {
 
   const { trabajos } = useTrabajo();
 

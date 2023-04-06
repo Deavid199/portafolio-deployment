@@ -5,7 +5,7 @@ import useAuth from "../hook/useAuth";
 import axios from "axios";
 import styles from "../styles/dregister.module.css";
 
-export default function dregister() {
+export default function Dregister() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

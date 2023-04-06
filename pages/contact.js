@@ -1,23 +1,22 @@
 import React from 'react'
 import Layout from "../components/layout"
-import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import particlesconfig from "../config/config-particles";
 import styles from '../styles/contact.module.css'
 import useMensaje from '../hook/useMensaje';
 
-export default function contact() {
+export default function Contact() {
 
   const { enviarMensaje, setNombre, setEmail, setMensaje, nombre, email, mensaje, enviado } = useMensaje();
 
-  const particlesInit = useCallback(async engine => {
+  const particlesInit = async (engine) => {
     await loadFull(engine);
-  }, []);
+  };
 
-  const particlesLoaded = useCallback(async container => {
+  const particlesLoaded = async (container) => {
     // await console.log(container);
-  }, []);
+  };
 
   return (
     <div className={styles.fondo}>

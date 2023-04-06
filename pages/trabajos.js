@@ -24,7 +24,7 @@ export default function Trabajos() {
       }
     }, 3000);
     return () => clearTimeout(timer);
-  }, [roll]);
+  }, []);
 
   return (
     <Administracion

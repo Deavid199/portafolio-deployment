@@ -22,7 +22,7 @@ export default function Mensajes() {
       }
     }, 3000);
     return () => clearTimeout(timer);
-  }, [roll]);
+  }, []);
 
   function limitarTexto(texto, maxCaracteres) {
     if (texto.length > maxCaracteres) {

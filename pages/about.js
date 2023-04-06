@@ -1,20 +1,20 @@
 import Layout from "../components/layout";
 import styles from "../styles/about.module.css";
-import { useCallback } from "react";
 import { loadFull } from "tsparticles";
 import Particles from "react-particles";
 import particlesconfig from "../config/particles-config";
 import Image from 'next/image'
 import Tecnology from "../components/tecnology";
 
-export default function about() {
-  const particlesInit = useCallback(async engine => {
-    await loadFull(engine);
-  }, []);
+export default function About() {
 
-  const particlesLoaded = useCallback(async container => {
+  const particlesInit = async (engine) => {
+    await loadFull(engine);
+  };
+
+  const particlesLoaded = async (container) => {
     // await console.log(container);
-  }, []);
+  };
 
   return (
     <div className={styles.cover}>
