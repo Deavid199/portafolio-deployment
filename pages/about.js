@@ -27,7 +27,7 @@ export default function About() {
             <h2>Sobre mí</h2>
             <p className={styles.about}>Hola a todos, soy <span>David Garcia</span> con mas de 2 años de experiencia en la creación de Sitios Web a medida. Asi como tambien he diseñado y desarrollado estrategias digitales para poder ofrecer un mejor servicio y una experiencia de usuario unica.</p>
             <div className={styles.atc}>
-              <p><span>"Si puedes puedes imaginarlo puedes programarlo."</span></p>
+              <p><span>&ldquo;Si puedes puedes imaginarlo puedes programarlo.&rdquo;</span></p>
               <p><span>— Programación ATC</span></p>
             </div>
           </div>
