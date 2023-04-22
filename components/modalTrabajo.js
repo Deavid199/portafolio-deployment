@@ -1,11 +1,9 @@
-// import Image from 'next/image'
-// import Link from 'next/link'
 import useTrabajo from '../hook/useTrabajo'
 import styles from '../styles/modalTrabajo.module.css'
 
 export default function ModalTrabajo() {
 
-    const { handleChangeModal, setTrabajo, setDescripcion, enviarProyecto, selectImg, trabajo, descripcion} = useTrabajo();
+    const { handleChangeModal, setTrabajo, setDescripcion, enviarProyecto, selectImg, trabajo, descripcion } = useTrabajo();
 
     return (
         <div className={styles.c}>
@@ -24,7 +22,7 @@ export default function ModalTrabajo() {
                         id='titulo'
                         type='text'
                         value={trabajo}
-                        onChange={ (e) => setTrabajo(e.target.value)}
+                        onChange={(e) => setTrabajo(e.target.value)}
                         required
                     />
                 </div>
@@ -34,15 +32,16 @@ export default function ModalTrabajo() {
                         id='descripcion'
                         type='text'
                         value={descripcion}
-                        onChange={ (e) => setDescripcion(e.target.value)}
+                        onChange={(e) => setDescripcion(e.target.value)}
                         required
                     />
                 </div>
                 <div className={styles.details}>
-                    <label htmlFor='titulo'>Imagen</label>
+                    <label htmlFor='imagen'>Imagen</label>
                     <input
-                        id='descripcion'
+                        id='imagen'
                         type='file'
+                        accept="image/*"
                         onChange={selectImg}
                         required
                     />

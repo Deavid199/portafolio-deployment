@@ -11,17 +11,10 @@ html {
   box-sizing: border-box;
 }
 
-/* *, *:before, *:after {
-  box-sizing: inherit;
-} */
-
 h1, h2, h3, p {
   margin: 0;
 }
-/* img {
-  max-width: 100%;
-  height: auto;
-} */
+
 [class*="contenedor"], 
 main {
   width: min(95%, 120rem);
@@ -38,6 +31,7 @@ body {
   font-size: 2rem;
   font-family: var(--fuente-principal);
   line-height: 1.5;
+  overflow-x: hidden;
 }
 .body{
   display: flex;

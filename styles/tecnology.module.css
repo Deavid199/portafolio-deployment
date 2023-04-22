@@ -36,13 +36,13 @@
     content: attr(mensaje);
     position: absolute;
     top: 0;
-    left: 15%;
-    width: max-content;
+    left: 0;
+    right: 0;
+    width: 100%;
     color: #fff;
     text-align: center;
     padding: 1rem;
     border-radius: 5px;
-    
     font-size: 3rem;
     pointer-events: none;
     transition: opacity .3s;

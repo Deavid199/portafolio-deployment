@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Layout from "../components/layout";
+import Layout from "../layouts/layout";
 import styles from "../styles/dlogin.module.css";
 import axios from "axios";
 import useAuth from "../hook/useAuth";

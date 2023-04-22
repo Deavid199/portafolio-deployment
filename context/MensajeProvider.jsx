@@ -9,6 +9,9 @@ const MensajeProvider = ({children}) => {
     const [ email, setEmail ] = useState('');
     const [ mensaje, setMensaje ] = useState('');
     const [ mensajes, setMensajes ] = useState([]);
+    const [modalMensaje, setModalMensaje] = useState(false);
+
+    const [cliente, setCliente] = useState({});
 
     const [ enviado, setEnviado ] = useState('');
 
@@ -59,7 +62,32 @@ const MensajeProvider = ({children}) => {
             console.log(error)
         }
     }
-    
+
+    const eliminarMsj = async(id) => {
+        const token = localStorage.getItem('token');
+        if(!token){
+            setCargando(false);
+            return
+        }
+        const config = {
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`
+            }
+        }
+        try {
+            const response = await axios.delete(`${process.env.API_URL}/api/elminarMsj/${id}`, config)
+            const updateMensajes = mensajes.filter(item => item.id != id);
+            setMensajes(updateMensajes);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const handleChangeModal = () => {
+        setModalMensaje(!modalMensaje)
+    }
+
     return (
         <MensajeContext.Provider
             value={{
@@ -67,11 +95,16 @@ const MensajeProvider = ({children}) => {
                 setNombre,
                 setEmail,
                 setMensaje,
+                handleChangeModal,
+                setCliente,
+                eliminarMsj,
                 nombre,
                 email,
                 mensaje,
                 mensajes,
                 enviado,
+                modalMensaje,
+                cliente,
             }}
         >
             {children}

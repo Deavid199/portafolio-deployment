@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../layouts/layout";
 import styles from "../styles/about.module.css";
 import { loadFull } from "tsparticles";
 import Particles from "react-particles";
@@ -32,7 +32,7 @@ export default function About() {
             </div>
           </div>
           <div className={styles.miti}>
-            <Image src="/img/time.png" width={400} height={400} alt="Imagen comun" />
+            <Image src="/img/time.png" width={400} height={400} alt="Imagen comun" priority />
           </div>
         </div>
         <div>

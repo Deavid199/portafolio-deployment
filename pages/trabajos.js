@@ -1,4 +1,4 @@
-import Administracion from "../components/administracion";
+import Administracion from "../layouts/administracion";
 import { useEffect } from 'react';
 import Image from 'next/image'
 import Link from "next/link"

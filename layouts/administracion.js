@@ -1,8 +1,10 @@
 import Head from "next/head";
-import Sidebar from "./sidebar";
+import Sidebar from "../components/sidebar";
 import Modal from 'react-modal';
 import useTrabajo from "../hook/useTrabajo";
-import ModalTrabajo from "./modalTrabajo";
+import useMensaje from "../hook/useMensaje";
+import ModalTrabajo from "../components/modalTrabajo";
+import ModalMensaje from "../components/modalMensaje";
 
 const customStyles = {
   content: {
@@ -20,6 +22,7 @@ Modal.setAppElement('#__next');
 export default function Administracion({ children, title = '', description = '' }) {
 
   const { modal } = useTrabajo();
+  const {modalMensaje} = useMensaje();
 
   return (
     <>
@@ -36,6 +39,11 @@ export default function Administracion({ children, title = '', description = '' 
       {modal && (
         <Modal isOpen={modal} style={customStyles}>
           <ModalTrabajo />
+        </Modal>
+      )}
+      {modalMensaje && (
+        <Modal isOpen={modalMensaje} style={customStyles}>
+          <ModalMensaje />
         </Modal>
       )}
     </>

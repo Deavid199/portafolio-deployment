@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import Administracion from "../components/administracion";
+import Administracion from "../layouts/administracion";
 import styles from '../styles/mensajes.module.css';
 import { useRouter } from "next/router";
 import useMensaje from "../hook/useMensaje";
@@ -8,16 +8,16 @@ import useAuth from "../hook/useAuth";
 
 export default function Mensajes() {
 
-  const { mensajes } = useMensaje();
+  const { handleChangeModal, mensajes, setCliente, eliminarMsj } = useMensaje();
 
   const { cargando, auth } = useAuth();
-  const {roll} = auth;
+  const { roll } = auth;
 
   const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if(roll !== "administrador"){
+      if (roll !== "administrador") {
         router.push("/");
       }
     }, 3000);
@@ -30,6 +30,11 @@ export default function Mensajes() {
     } else {
       return texto;
     }
+  }
+
+  const handleShow = (mensaje) => {
+    handleChangeModal();
+    setCliente(mensaje)
   }
   return (
     <div>
@@ -58,10 +63,10 @@ export default function Mensajes() {
                     <td className={styles.dato}>{mensaje.correo}</td>
                     <td className={styles.dato}>{limitarTexto(mensaje.mensaje, 10)}</td>
                     <td className={`${styles.actions}`}>
-                      <button>
+                      <button onClick={() => handleShow(mensaje)}>
                         <FaSearch />
                       </button>
-                      <button>
+                      <button onClick={() => eliminarMsj(mensaje.id)}>
                         <FaSkull />
                       </button>
                     </td>

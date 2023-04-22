@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from "../components/layout"
+import Layout from "../layouts/layout"
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import particlesconfig from "../config/config-particles";

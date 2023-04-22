@@ -6,18 +6,28 @@
     height: 100vh;
     width: 100%;
     position: absolute;
+    overflow-x: hidden;
 }
 .hand{
     position: absolute;
     right: 0;
-    bottom: 25%;
-    width: 100vw;
+    bottom: 45%;
     height: auto;
+    margin-right: -200px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
+    opacity: 0;
+    animation: slideIn 3s ease forwards;
 }
+@keyframes slideIn {
+    to {
+        bottom: 25%;
+        margin-right: 0;
+        opacity: 1;
+    }
+  }
 @media(min-width: 768px){
     .hand{
         width: 70vw;
