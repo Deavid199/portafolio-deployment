@@ -1,11 +1,10 @@
 import Administracion from "../layouts/administracion";
 import { useEffect } from 'react';
-import Image from 'next/image'
-import Link from "next/link"
+import Image from 'next/image';
 import { useRouter } from "next/router";
-import styles from '../styles/trabajos.module.css'
-import useTrabajo from "../hook/useTrabajo"
-import useAuth from "../hook/useAuth"
+import styles from '../styles/trabajos.module.css';
+import useTrabajo from "../hook/useTrabajo";
+import useAuth from "../hook/useAuth";
 
 export default function Trabajos() {
 
@@ -44,9 +43,6 @@ export default function Trabajos() {
                 <Image className={styles.portada} src={proyecto.enlace} width="200" height="100" alt={proyecto.trabajo} priority/>
                 <div className={styles.contenido}>
                   <p>{proyecto.descripcion}</p>
-                  <Link href="/">
-                    ver producto ver producto
-                  </Link>
                 </div>
               </div>
             ))

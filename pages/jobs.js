@@ -18,7 +18,7 @@ export default function Jobs() {
           {trabajos ?
             trabajos.map(proyecto => (
               <div className={styles.card} key={proyecto.id}>
-                <Image className={styles.portada} src={proyecto.enlace} width={200} height={100} alt="portada" priority />
+                <Image className={styles.portada} src={proyecto.enlace} width={200} height={250} alt="portada" priority />
                 <div className={styles.contenido}>
                   <a href={proyecto.trabajo} target="_blank" rel="noopener noreferrer">
                     {proyecto.descripcion}

@@ -17,6 +17,7 @@
     right: 0;
     color: red;
     padding: 0 .5rem;
+    cursor: pointer;
 }
 .c form{
     width: 100%;
@@ -42,10 +43,12 @@
     color: white;
     border-radius: 20px;
     padding: 5px 10px;
+    cursor: pointer;
 }
 .action button:nth-child(2){
     background: black;
     color: white;
     border-radius: 20px;
     padding: 5px 10px;
+    cursor: pointer;
 }

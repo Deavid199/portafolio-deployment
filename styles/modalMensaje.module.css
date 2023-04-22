@@ -20,6 +20,7 @@
     font-weight: 900;
     font-size: 4rem;
     padding: 0 .5rem;
+    cursor: pointer;
 }
 .mensaje{
     width: 100%;
@@ -48,6 +49,9 @@
     padding: .5rem;
     position: relative;
     overflow-y: scroll;
+    overflow-x: hidden;
+    height: 200px;
+    word-break:break-all;
 }
 .action{
     display: flex;
@@ -61,4 +65,5 @@
     font-size: 3rem;
     border-radius: 20px;
     padding: 1rem 3rem;
+    cursor: pointer;
 }

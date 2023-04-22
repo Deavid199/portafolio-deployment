@@ -52,7 +52,6 @@ const TrabajoProvider = ({ children }) => {
             headers: {
                 "Content-Type": "multipart/form-data",
                 Authorization: `Bearer ${token}`,
-                "Content-Length": imagen.size,
                 "Cache-Control": "no-cache",
             }
         }
@@ -61,8 +60,11 @@ const TrabajoProvider = ({ children }) => {
         try {
             const response = await axios.post(`${process.env.API_URL}/api/trabajo/submit`, data, config);
             console.log(response);
-            setTrabajos([...trabajos, response.data])
+            setTrabajos([...trabajos, response.data]);
             setModal(false);
+            setTrabajo('');
+            setImagen(null);
+            setDescripcion('');
         } catch (error) {
             console.log(error);
         }
