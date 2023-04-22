@@ -87,9 +87,8 @@ const TrabajoProvider = ({ children }) => {
 
         try {
             const response = await axios.delete(`${process.env.API_URL}/api/trabajo/delete/${id}`, config);
-            const original = [...trabajos];
-            setTrabajos(original.splice(1, id));
-            console.log(response)
+            const trabajosPut = trabajos.filter(item => item.id != id);
+                setTrabajos(trabajosPut);
         } catch (error) {
             console.log(error);
         }
