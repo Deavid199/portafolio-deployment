@@ -188,7 +188,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 60rem;
+    /* max-width: 60rem; */
     line-height: 5rem;
 }
 .portada{
